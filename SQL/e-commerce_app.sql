@@ -118,6 +118,8 @@ update product_details pd set category_id=(select id from product_categories pc 
 alter table product_details drop column product_category;
 */
 
+create index product_name on product_details ("name");
+create index category_name on categories ("name");
 
 
 
